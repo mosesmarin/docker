@@ -66,7 +66,7 @@ kubectl get events
 
 
 --------------------------------------------------
-#Docker commands
+# Docker commands
 
 ## delete image
 docker rmi python-app01
@@ -100,7 +100,7 @@ docker load --input python-app04.tar
 
 
 --------------------------------------------------
-#URLS
+# URLS
 
 
 ## Create docker image
