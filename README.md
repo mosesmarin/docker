@@ -42,19 +42,33 @@ kubectl exec -it shell-demo -- /bin/bash
 ## push image to docker hub
 docker images
 --find image id , then tag with repository
-docker tag d161f374e69f m0ses1/python-app:01
+docker tag 56e3b6fbe337 m0ses1/python-app:01
+docker tag 542b520442f7 m0ses1/python-app:02
+docker tag eb5d23876f5d m0ses1/python-app:03
+docker tag 6ccddf34c1a1 m0ses1/python-app:04
 docker push m0ses1/python-app:01
+docker push m0ses1/python-app:02
+docker push m0ses1/python-app:03
+docker push m0ses1/python-app:04
 
 
 ## Create k8s deployment 
-kubectl create deployment python-app --image=m0ses1/python-app:01
+kubectl create deployment python-app01 --image=m0ses1/python-app:01
+kubectl create deployment python-app02 --image=m0ses1/python-app:02
+kubectl create deployment python-app03 --image=m0ses1/python-app:03
+kubectl create deployment python-app04 --image=m0ses1/python-app:04
 
 ## log into pod
-kubectl exec -it python-app -- /bin/sh
+kubectl exec -it python-app03-5d48d5bfd7-2bc2v -- /bin/sh
+
+kubectl describe pod
 
 ## delete deployment (termiantes pod)
 kubectl get deployments
-kubectl delete deployment python-app
+kubectl delete deployment python-app01
+kubectl delete deployment python-app02
+kubectl delete deployment python-app03
+kubectl delete deployment python-app04
 
 ## delete pod
 kubectl get pods
@@ -70,6 +84,7 @@ kubectl get events
 
 ## delete image
 docker rmi python-app01
+docker rmi -f python-app01
 
 ## check containers 
 docker ps
