@@ -8,6 +8,6 @@ RUN pip install -r requirements.txt
 
 RUN adduser -D -u 10001 noroot
 
-USER noroot
+USER 10001
 
 CMD ["python", "python-kafka.py"]

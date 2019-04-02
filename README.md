@@ -42,14 +42,18 @@ kubectl exec -it shell-demo -- /bin/bash
 ## push image to docker hub
 docker images
 --find image id , then tag with repository
-docker tag 56e3b6fbe337 m0ses1/python-app:01
-docker tag 542b520442f7 m0ses1/python-app:02
-docker tag eb5d23876f5d m0ses1/python-app:03
-docker tag 6ccddf34c1a1 m0ses1/python-app:04
+docker tag 0b1409e76382 m0ses1/python-app:04
+docker tag d89e1e586ba6 m0ses1/python-app:03
+docker tag 4737bb6f37c6 m0ses1/python-app:02
+docker tag a75f5958871d m0ses1/python-app:01
 docker push m0ses1/python-app:01
 docker push m0ses1/python-app:02
 docker push m0ses1/python-app:03
 docker push m0ses1/python-app:04
+
+
+
+
 
 
 ## Create k8s deployment 
