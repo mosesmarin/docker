@@ -42,6 +42,7 @@ kubectl exec -it shell-demo -- /bin/bash
 ## push image to docker hub
 docker images
 --find image id , then tag with repository
+docker tag 20999b61adb1 m0ses1/python-app:05
 docker tag 0b1409e76382 m0ses1/python-app:04
 docker tag d89e1e586ba6 m0ses1/python-app:03
 docker tag 4737bb6f37c6 m0ses1/python-app:02
@@ -50,6 +51,7 @@ docker push m0ses1/python-app:01
 docker push m0ses1/python-app:02
 docker push m0ses1/python-app:03
 docker push m0ses1/python-app:04
+docker push m0ses1/python-app:05
 
 
 
@@ -61,6 +63,7 @@ kubectl create deployment python-app01 --image=m0ses1/python-app:01
 kubectl create deployment python-app02 --image=m0ses1/python-app:02
 kubectl create deployment python-app03 --image=m0ses1/python-app:03
 kubectl create deployment python-app04 --image=m0ses1/python-app:04
+kubectl create deployment python-app05 --image=m0ses1/python-app:05
 
 ## log into pod
 kubectl exec -it python-app03-5d48d5bfd7-2bc2v -- /bin/sh

@@ -6,7 +6,7 @@ WORKDIR /app
 
 RUN pip install -r requirements.txt
 
-RUN adduser -D -u 10001 noroot
+RUN adduser -D -u 10001 10001
 
 USER 10001
 
