@@ -17,16 +17,16 @@ print ("Starting consumer");
 
 # Start consumer
 c = Consumer({
-    'bootstrap.servers': '$brokers',
+    'bootstrap.servers': brokers,
     'sasl.mechanisms': 'SCRAM-SHA-512',
     'security.protocol': 'SASL_SSL',
-    'sasl.username': '$user',
-    'sasl.password': '$key',
+    'sasl.username': user,
+    'sasl.password': key,
     'group.id': 'mygroup',
     'auto.offset.reset': 'earliest'
 })
 
-c.subscribe(['$topic'])
+c.subscribe([topic])
 print (c) 
 
 while True:
