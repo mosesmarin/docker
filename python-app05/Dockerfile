@@ -1,6 +1,7 @@
 FROM centos/python-34-centos7
 
 RUN git clone https://github.com/confluentinc/confluent-kafka-python.git
+RUN git clone https://github.com/edenhill/kafkacat.git
 
 COPY ./consumer.py /app/
 COPY ./consumer-parms* /app/
@@ -13,6 +14,7 @@ USER root
 RUN yum clean all
 RUN yum -y install librdkafka-devel python-devel
 RUN sh /opt/app-root/src/install-requirements.sh
+
 
 RUN useradd -u 10001 10001
 RUN chown -R 10001 /app

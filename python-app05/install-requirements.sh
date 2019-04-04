@@ -3,3 +3,7 @@ cd /opt/app-root/src/confluent-kafka-python
 python setup.py build
 python setup.py install
 
+cd /opt/app-root/src/kafkacat
+./configure
+make
+make install
