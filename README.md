@@ -3,11 +3,11 @@
 
 
 ## Setup java and java consumer producer
-sudo yum install java-1.8.0
+```sudo yum install java-1.8.0
 wget ftp://apache.cs.utah.edu/apache.org/kafka/2.2.0/kafka_2.12-2.2.0.tgz
 tar -xzf kafka_2.12-2.2.0.tgz
 cd kafka_2.12-2.2.0/
-
+```
 ## Check if MKS cluster is active
 aws kafka describe-cluster --region us-east-1 --cluster-arn "arn:aws:kafka:us-east-1:705115062918:cluster/demo-cluster/87730fba-dbdd-4764-8450-26229e600167-2"
 
