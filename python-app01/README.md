@@ -10,7 +10,10 @@ Small docker image with python noroot user
 
 
 # Create image
+```
 docker build -t python-app01 .
-
+```
 # Run image
+```
 docker run -it python-app01 /bin/sh
+```
