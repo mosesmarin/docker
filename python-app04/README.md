@@ -12,7 +12,10 @@ Distroless python docker image with noroot user executing python app
 
 
 # Create image
+```
 docker build -t python-app04 .
-
+```
 # Run image
+```
 docker run -t python-app04
+```
