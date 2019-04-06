@@ -11,7 +11,10 @@ Small docker image with python kafka app noroot user
 
 
 # Create image
+```
 docker build -t python-app02 .
-
+```
 # Run image
+```
 docker run -it python-app02 /bin/sh
+```
