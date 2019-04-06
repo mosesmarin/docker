@@ -7,7 +7,7 @@ Distroless python docker image with noroot user executing python app
 # Requirements
 
 - Python (http://python.org)
-- kafka-python (pip install --target=. kafka-python)
+- kafka-python (```pip install --target=. kafka-python```)
 - Docker (http://docker.com)
 
 
