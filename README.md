@@ -53,7 +53,9 @@ kubectl exec -it shell-demo -- /bin/bash
 ## push image to docker hub
 ```bash
 docker images
+```
 --find image id , then tag with repository
+```bash
 docker tag 7413542836f4 m0ses1/python-app:05
 docker tag 0b1409e76382 m0ses1/python-app:04
 docker tag d89e1e586ba6 m0ses1/python-app:03
