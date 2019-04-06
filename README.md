@@ -11,7 +11,8 @@ cd kafka_2.12-2.2.0/
 ```
 ## Check if MKS cluster is active
 ```bash
-aws kafka describe-cluster --region us-east-1 --cluster-arn "arn:aws:kafka:us-east-1:705115062918:cluster/demo-cluster/87730fba-dbdd-4764-8450-26229e600167-2"
+aws kafka describe-cluster --region us-east-1 \
+--cluster-arn "arn:aws:kafka:us-east-1:705115062918:cluster/demo-cluster/87730fba-dbdd-4764-8450-26229e600167-2"
 ```
 ## set account keys if needed
 ```bash
@@ -19,11 +20,13 @@ aws configure
 ```
 ## Create Topic
 ```bash
-bin/kafka-topics.sh --create --zookeeper "172.31.23.57:2181,172.31.2.237:2181,172.31.83.25:2181" --replication-factor 3 --partitions 1 --topic KAFKA-TOPIC
+bin/kafka-topics.sh --create --zookeeper "172.31.23.57:2181,172.31.2.237:2181,172.31.83.25:2181"\
+--replication-factor 3 --partitions 1 --topic KAFKA-TOPIC
 ```
 ## Find Broker
 ```bash
-aws kafka get-bootstrap-brokers --region us-east-1 --cluster-arn arn:aws:kafka:us-east-1:705115062918:cluster/demo-cluster/87730fba-dbdd-4764-8450-26229e600167-2
+aws kafka get-bootstrap-brokers --region us-east-1 \
+--cluster-arn arn:aws:kafka:us-east-1:705115062918:cluster/demo-cluster/87730fba-dbdd-4764-8450-26229e600167-2
 ```
 ## Producer and consumer
 ```bash
