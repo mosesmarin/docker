@@ -10,7 +10,10 @@ Base docker image with python
 
 
 # Create image
+```
 docker build -t python-app00 .
-
+```
 # Run image
+```
 docker run -it python-app00 /bin/sh
+```
