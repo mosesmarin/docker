@@ -3,14 +3,14 @@
 
 
 ## Setup java and java consumer producer
-```
+```bash
 sudo yum install java-1.8.0
 wget ftp://apache.cs.utah.edu/apache.org/kafka/2.2.0/kafka_2.12-2.2.0.tgz
 tar -xzf kafka_2.12-2.2.0.tgz
 cd kafka_2.12-2.2.0/
 ```
 ## Check if MKS cluster is active
-```
+```console
 aws kafka describe-cluster --region us-east-1 --cluster-arn "arn:aws:kafka:us-east-1:705115062918:cluster/demo-cluster/87730fba-dbdd-4764-8450-26229e600167-2"
 ```
 ## set account keys if needed
@@ -150,8 +150,9 @@ https://gist.github.com/npearce/6f3c7826c7499587f00957fee62f8ee9
 
 ## Python app example
 https://www.tutorialkart.com/docker/docker-image-with-python-application-example/
+```
 pip install --target=/home/ec2-user/python-application kafka-python
-
+```
 
 ## kafka requirements for pip install 
 https://github.com/OpenBankProject/OBP-Kafka-Python
