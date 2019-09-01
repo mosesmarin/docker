@@ -26,5 +26,7 @@ kubectl create deployment python-app06 --image=m0ses1/python-app:05
 
 
 # Copy files out of container
+```
 docker container ls
 docker cp b2a93a8f8c52:/lambda/image.jpg .
+```
