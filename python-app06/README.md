@@ -1,15 +1,15 @@
-# Docker-Confluent_Kafka-Python
+# Python env for aws lambda 
 
-Centos python docker image with noroot user executing python app
+Used to develop code for aws lambda and api gateway
 
 
 
 # Requirements
 
 - Python (http://python.org)
-- kafka-python (`pip install --target=. kafka-python`)
 - Docker (http://docker.com)
-
+- qrcode
+- pillow
 
 # Create image
 ```
