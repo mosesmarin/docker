@@ -18,15 +18,6 @@ docker build -t python-app07 .
 docker build -t lambda-code .
 
 ```
-# Run image
-```
-docker build -t lambda-code .
-
-```
-# Kubectl
-```
-kubectl create deployment python-app07 --image=m0ses1/python-app:07
-```
 
 
 # Copy files out of container
