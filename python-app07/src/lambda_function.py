@@ -52,7 +52,7 @@ def lambda_handler(event, context):
     # img.save("image.png")
     # img.save("image.bmp")
     # img.save("image.jpeg")
-    img.save("image.jpg")
+    img.save("/tmp/image.jpg")
     
     message = MIMEMultipart("alternative")
     message["Subject"] = mail_subject
@@ -70,7 +70,7 @@ def lambda_handler(event, context):
     part2 = MIMEText(html, "html")
     
     # This example assumes the image is in the current directory
-    fp = open('image.jpg', 'rb')
+    fp = open('/tmp/image.jpg', 'rb')
     msgImage = MIMEImage(fp.read())
     fp.close()
     
