@@ -1,6 +1,7 @@
 # Python env for aws lambda 
 
 Used to develop code for aws lambda and api gateway
+In this example lambda code is created
 
 
 
@@ -13,20 +14,23 @@ Used to develop code for aws lambda and api gateway
 
 # Create image
 ```
-docker build -t python-app06 .
+docker build -t python-app07 .
+docker build -t lambda-code .
+
 ```
 # Run image
 ```
-docker run -it python-app06 /bin/bash
+docker run -it python-app07 /bin/bash
+docker run -it lambda-code /bin/bash
 ```
 # Kubectl
 ```
-kubectl create deployment python-app06 --image=m0ses1/python-app:06
+kubectl create deployment python-app07 --image=m0ses1/python-app:07
 ```
 
 
 # Copy files out of container
 ```
 docker container ls
-docker cp b2a93a8f8c52:/lambda/image.jpg .
+docker cp b2a93a8f8c52:/lambda.zip .
 ```
