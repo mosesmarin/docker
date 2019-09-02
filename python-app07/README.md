@@ -22,6 +22,6 @@ docker build -t lambda-code .
 
 # Copy files out of container
 ```
-ID=$(docker create my-lambda /bin/true)	
+ID=$(docker create lambda-code /bin/true)	
 docker cp $ID:/lambda .			
 ```
