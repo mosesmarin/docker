@@ -20,8 +20,8 @@ docker build -t lambda-code .
 ```
 # Run image
 ```
-docker run -it python-app07 /bin/bash
-docker run -it lambda-code /bin/bash
+docker build -t lambda-code .
+
 ```
 # Kubectl
 ```
@@ -31,6 +31,6 @@ kubectl create deployment python-app07 --image=m0ses1/python-app:07
 
 # Copy files out of container
 ```
-docker container ls
-docker cp b2a93a8f8c52:/lambda.zip .
+ID=$(docker create my-lambda /bin/true)	
+docker cp $ID:/lambda .			
 ```
