@@ -1,6 +1,6 @@
-# Docker-Kafka-Python
+# Docker-Alpine-OpenJDK-Flink
 
-Base linux with flink01
+Base linux with Flink
 
 
 # Requirements
